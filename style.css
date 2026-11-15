@@ -88,3 +88,99 @@ border-radius: 15px;
 .landmark h3 {
   padding: var(--space-3) var(--space-1);
 }
+
+/* -----------------------------------------
+Landmark layout
+----------------------------------------- */
+
+.directions-links {
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+gap: var(--space-4);
+
+
+}
+.directions-link{
+  display: flex;
+  padding: var(--space-3);
+  background-color: var(--action);
+  color: var(--button-text);
+  text-align: center;
+  border-radius: var(--border-radius);
+ 
+}
+
+.directions-link:hover {
+  background-color: var(--action-hover);
+  color: var(--button-text);
+  transform: translateY(-3px);
+}
+
+/* -----------
+page areas styling
+----------------- */
+
+.landmark-information, .landmark-more-images, .landmark-intro {
+  margin: var(--space-12);
+}
+
+.landmark-intro {
+  margin-top: 0;
+}
+#pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media (min-width: 600px){
+      /* this applies to mobile in landscape and some tablets in portrait */
+  .landmark-images-grid{
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    gap: var(--space-6);}
+  
+}/*   end min-width 600 */
+
+  
+
+@media (min-width: 900px){
+      /* this applies to tablets */
+ /* .landmark-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }*/
+    .landmark-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    align-items: start;
+  }
+
+  .landmark-information{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-6);
+  }
+
+  .landmark-images-grid{
+     grid-template-columns:  repeat(3, 1fr);
+  }
+  
+
+}/*   end min-width 900 */
+
+
+@media (min-width: 1200px){
+      /* this applies average laptops */
+
+}/*   end min-width 1200 */
+
+  
+@media (min-width: 1800px){
+      /* this applies to very large screens */
+
+}/*   end min-width 1800 */

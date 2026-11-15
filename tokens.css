@@ -46,6 +46,9 @@
   --grid-gap: var(--space-4);
   --section-spacing: var(--space-12);
   --content-padding: var(--space-4);
+
+/* Other settings */
+  --border-radius: 10px;
 }
 
 html {
