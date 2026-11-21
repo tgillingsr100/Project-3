@@ -11,10 +11,29 @@
 <body>
   <header>
     <div class="site-title">NYC Landmarks</div>
+    <nav class="site-navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="landmarks-dropdown">
+            Landmarks
+          </button>
+          <ul class="dropdown__menu" id="landmarks-dropdown">
+            <li><a href="landmark-liberty.html">Statue of Liberty</a></li>
+            <li><a href="landmark-empire.html">Empire State Building</a></li>
+            <li><a href="landmark-ferry.html">Staten Island Ferry</a></li>
+            <li><a href="landmark-wonder.html">Wonder Wheel</a></li>
+            <li><a href="landmark-yankee.html">Yankee Stadium</a></li>
+            <li><a href="landmark-tram.html">Roosevelt Island Tramway</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
+    </nav>
   </header>
 
 <main>
-  <section class="introduction">
+  <section class="introduction" id="about">
     <h1>NYC Landmarks Virtual Tour</h1>
     <p class="intro">This site highlights some interesting landmarks across New York City's five boroughs.</p>
     <p>New York City is filled with landmarks, tourist attractions and historic sites dating from before it was known as
@@ -23,7 +42,7 @@
     <div class="videoWrapper ratio-16-9">
 
       <iframe width="908" height="519" src="https://www.youtube.com/embed/_T9bUOPB4lk"
-        title="Top 10 Best Tourist Attractions in New York City - Travel Guide 2026" frameborder="0"
+        title="Top 10 Best Tourist Attractions in New York City - Travel Guide 2026"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
@@ -31,7 +50,7 @@
     <h2>New York's Most Iconic Foods</h2>
     <div class="videoWrapper ratio-16-9">
       <iframe width="908" height="519" src="https://www.youtube.com/embed/CE6Y8tqhO4A?si=4CaHJgqAkci5OuYY"
-        title="YouTube video player" frameborder="0"
+        title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
@@ -121,5 +140,7 @@
 
 <footer>
   <p>Site by _Tempestt G._</p>
-</footer></body>
+</footer>
+<script src="nav.js"></script>
+</body>
 </html>

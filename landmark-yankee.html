@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yankee Stadium | NYC Landmarks</title>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="page">
+    <header>
+        <div class="site-title">NYC Landmarks</div>
+        <nav class="site-navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="landmarks-dropdown">
+                        Landmarks
+                    </button>
+                    <ul class="dropdown__menu" id="landmarks-dropdown">
+                        <li><a href="landmark-liberty.html">Statue of Liberty</a></li>
+                        <li><a href="landmark-empire.html">Empire State Building</a></li>
+                        <li><a href="landmark-ferry.html">Staten Island Ferry</a></li>
+                        <li><a href="landmark-wonder.html">Wonder Wheel</a></li>
+                        <li><a href="landmark-yankee.html">Yankee Stadium</a></li>
+                        <li><a href="landmark-tram.html">Roosevelt Island Tramway</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INTRO -->
+        <section class="landmark-intro">
+            <div class="landmark-introtext">
+                <h1>Yankee Stadium</h1>
+
+                <p class="tagline">The Bronx home of the New York Yankees and New York City FC.</p>
+
+                <p>Yankee Stadium, located in the Bronx, is the home field of the New York Yankees baseball team and
+                    New York City FC soccer team.</p>
+            </div>
+
+            <!-- HERO IMAGE -->
+            <figure class="hero">
+                <img src="images/Square/pexels-malcolmhill-12360516.jpg"
+                    alt="Yankee Stadium seen from the water with stadium title visible.">
+                <figcaption><a href="https://www.pexels.com/photo/yankee-stadium-under-the-blue-sky-12360516/"
+                        target="_blank" rel="noopener">Photo by Malcolm Hill</a></figcaption>
+            </figure>
+        </section>
+
+        <!-- DESCRIPTION ABOUT SECTION -->
+        <div class="landmark-information">
+            <section class="landmark-about">
+                <h2>About</h2>
+                <p><strong>Built:</strong> Originally opened in April 1923, the stadium became legendary for baseball
+                    milestones, World Series games, and other major events in American sports history. It served as the
+                    home field of the New York Yankees for generations and was known as “The House That Ruth Built”
+                    after Babe Ruth, a famous Yankee player.</p>
+                <p><strong>Today:</strong> The original stadium was replaced in 2009 by a new stadium of the same name
+                    that paid homage to the original in many of its design elements. The new 46,543 seat stadium
+                    mimics the old stadium both in the exterior design and the playing field while adding modern
+                    amenities.</p>
+
+                <!-- MORE INFO -->
+                <h3>More Info</h3>
+                <ul>
+                    <li><a href="https://www.britannica.com/place/Yankee-Stadium" target="_blank"
+                            rel="noopener">Britannica: Yankee Stadium history</a></li>
+                    <li><a href="https://www.mlb.com/yankees/ballpark/information" target="_blank"
+                            rel="noopener">Yankee Stadium Reference Guide (directions and more)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Yankee_Stadium" target="_blank"
+                            rel="noopener">Wikipedia: Yankee Stadium</a></li>
+                </ul>
+            </section>
+
+            <aside class="landmark-directions">
+                <!-- DIRECTIONS -->
+                <h3 id="directions-title">Directions</h3>
+                <p>Go to 1 East 161st Street in the Bronx. Check your ticket for the correct entrance.</p>
+                <ul class="directions-links">
+                    <li>
+                        <a class="directions-link"
+                            href="https://www.google.com/maps/dir/?api=1&amp;destination=Yankee%20Stadium%2C%201%20East%20161st%20Street%2C%20Bronx%2C%20NY%2010451"
+                            target="_blank" rel="noopener">Get directions in Google Maps</a>
+                    </li>
+                    <li>
+                        <a class="directions-link"
+                            href="https://maps.apple.com/directions?destination=Yankee%20Stadium%2C%201%20East%20161st%20Street%2C%20Bronx%2C%20NY%2010451"
+                            target="_blank" rel="noopener">Get directions in Apple Maps</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
+        <nav id="pagination" aria-label="Pagination">
+            <a class="btn" rel="prev" href="landmark-wonder.html">← Previous</a>
+            <a class="btn" rel="next" href="landmark-tram.html">Next →</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>Site by _Tempestt G._</p>
+    </footer>
+<script src="nav.js"></script>
+</body>
+
+</html>

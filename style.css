@@ -5,6 +5,131 @@ img, video{
   height: auto;
 }
 
+/* Main navigation colors use the existing project theme. */
+:root {
+  --nav-color: var(--button-text);
+  --nav-bg: var(--action);
+  --nav-hover: var(--button-text);
+  --nav-dropdown-bg: var(--alternate-background);
+  --nav-highlight: var(--alternate-action-hover);
+  --nav-dropdown-shadow: rgba(54, 44, 33, 0.25);
+}
+
+.site-navigation {
+  position: relative;
+  z-index: 10;
+  margin-top: var(--space-4);
+  padding: 0 var(--space-2);
+  background-color: var(--nav-bg);
+}
+
+.site-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.site-navigation > ul {
+  grid-auto-flow: column;
+  justify-content: start;
+}
+
+.site-navigation > ul > li {
+  margin: 0 var(--space-2);
+}
+
+.site-navigation a,
+.site-navigation .dropdown__title {
+  display: inline-block;
+  color: var(--nav-color);
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.site-navigation > ul > li > a,
+.site-navigation > ul > li > .dropdown__title {
+  padding: var(--space-3) var(--space-2);
+  border: 0;
+  border-top: 3px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 280ms all 120ms ease-out;
+}
+
+.site-navigation > ul > li > a:hover,
+.site-navigation > ul > li > a:focus-visible,
+.site-navigation > ul > li > .dropdown__title:hover,
+.site-navigation > ul > li > .dropdown__title:focus-visible {
+  border-top-color: var(--nav-hover);
+  color: var(--nav-hover);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown__title {
+  display: inline-flex;
+  align-items: center;
+}
+
+.dropdown .dropdown__title::after {
+  content: "";
+  margin-left: 0.35em;
+  border: 0.35rem solid transparent;
+  border-top-color: currentColor;
+  transform: translateY(0.15em);
+}
+
+.dropdown .dropdown__menu {
+  position: absolute;
+  z-index: 20;
+  min-width: 15rem;
+  left: 50%;
+  top: calc(100% - 0.25rem);
+  padding: var(--space-2) 0;
+  background-color: var(--nav-dropdown-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.15em 0.25em var(--nav-dropdown-shadow);
+  transform: rotateX(-90deg) translateX(-50%);
+  transform-origin: top center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 280ms all 120ms ease-out;
+}
+
+.dropdown .dropdown__menu a {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  color: var(--primary-text);
+  text-align: left;
+  opacity: 0;
+  transition: 280ms all 120ms ease-out;
+}
+
+.dropdown .dropdown__menu a:hover,
+.dropdown .dropdown__menu a:focus-visible {
+  color: var(--button-text);
+  background-color: var(--nav-highlight);
+}
+
+.dropdown:hover .dropdown__menu,
+.dropdown:focus-within .dropdown__menu,
+.dropdown.is-open .dropdown__menu {
+  opacity: 1;
+  transform: rotateX(0) translateX(-50%);
+  visibility: visible;
+}
+
+.dropdown:hover .dropdown__menu a,
+.dropdown:focus-within .dropdown__menu a,
+.dropdown.is-open .dropdown__menu a {
+  opacity: 1;
+}
+
 figure{ margin:0;}
 
 
